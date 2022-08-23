@@ -15,6 +15,7 @@ class Login : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        supportActionBar?.hide()
         mAuth = FirebaseAuth.getInstance()
         binding.btnRegister.setOnClickListener{
             val intent =Intent(this,SignUp::class.java)
@@ -30,11 +31,12 @@ class Login : AppCompatActivity() {
 
     private fun login(email: String , password: String){
         //login
-        mAuth.createUserWithEmailAndPassword(email, password)
+        mAuth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     //jump to homepage
                     val intent = Intent(this@Login ,MainActivity::class.java)
+                    finish()
                     startActivity(intent)
                 } else {
                     Toast.makeText(this@Login , "User doesn't exist", Toast.LENGTH_SHORT).show()
