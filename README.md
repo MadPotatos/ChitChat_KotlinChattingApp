@@ -1,8 +1,5 @@
 # ChitChat
-
-![Kotlin: Running](https://img.shields.io/badge/Kotlin-running-green?style=for-the-badge)
-![Firebase: Running](https://img.shields.io/badge/Firebase-running-orange?style=for-the-badge)
-
+ ![Kotlin](https://img.shields.io/badge/kotlin-%230095D5.svg?style=for-the-badge&logo=kotlin&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
 # About
 ChitChat is a simple Android app built with Kotlin and Android studio
 
